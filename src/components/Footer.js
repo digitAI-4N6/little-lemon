@@ -33,7 +33,7 @@ export default function Footer() {
           <li>Email</li>
         </ul>
         <h3>Social Media Links</h3>
-        <ul>
+        <ul className="list">
           <li>
             <a href="">Fakebook</a>
           </li>
