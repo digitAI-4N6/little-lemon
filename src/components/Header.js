@@ -1,8 +1,9 @@
-import logo from "../images/Logo.svg";
-import Nav from "./Nav";
+import restaurant from "../images/restaurant.jpg";
 
 export default function Header() {
     return (
-        <h1>Make a Reservation</h1>
+        <><h1 className="header">Make a Reservation</h1>
+        {/* <img src={restaurant} alt="restaurant" className="heroImg"></img> */}
+        </>
     )
 }
