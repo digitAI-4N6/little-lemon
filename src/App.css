@@ -75,12 +75,6 @@ grid-template-rows: 100px;
 padding-top: 50px;
 }
 
-.heroImg {
-  display: grid;
-  max-width: 100%;
-  height:auto;
-}
-
 .foot {
   display: flexbox;
 }
