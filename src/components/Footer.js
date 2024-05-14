@@ -3,8 +3,9 @@ import Logo from "../images/Logo .svg";
 export default function Footer() {
   return (
     <>
-      <img src={Logo} alt="Logo" />
-      <h3>Doormat Navigation</h3>
+    <article className="foot">
+      <img src={Logo} alt="Logo"/>
+      <h3 className="list">Doormat Navigation</h3>
       <ul>
         <li>
           <a href="">Home</a>
@@ -25,13 +26,13 @@ export default function Footer() {
           <a href="">Login</a>
         </li>
       </ul>
-      <h3>Contact</h3>
+      <h3 className="list">Contact</h3>
       <ul>
         <li>Address</li>
         <li>Phone Number</li>
         <li>Email</li>
       </ul>
-      <h3>Social Media Links</h3>
+      <h3 className="list">Social Media Links</h3>
       <li>
         <a href="">Fakebook</a>
       </li>
@@ -41,6 +42,7 @@ export default function Footer() {
       <li>
         <a href="">Punterest</a>
       </li>
+      </article>
     </>
   );
 }
