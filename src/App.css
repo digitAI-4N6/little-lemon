@@ -66,3 +66,25 @@
 .container img {
   padding-top: 15px;
 }
+
+.header {
+  text-align: center;
+  display: grid;
+grid-template-columns: 1/ span 12;
+grid-template-rows: 100px;
+padding-top: 50px;
+}
+
+.heroImg {
+  display: grid;
+  max-width: 100%;
+  height:auto;
+}
+
+.foot {
+  display: flexbox;
+}
+
+.list {
+  margin:5px;
+}
