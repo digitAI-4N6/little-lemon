@@ -46,7 +46,8 @@
   background-color: #2b2d42;
   display: flex;
   flex-flow: row wrap;
-  justify-content: stretch;
+  justify-content: center;
+  align-content: right;
 }
 
 .container li {
