@@ -78,17 +78,11 @@ padding-top: 50px;
 
 .foot {
   display: inline-flex;
-  box-sizing: border-box;
+  box-sizing:content-box;
   text-align: center;
+  background-color: burlywood;
 }
 
-/* .list {
-  margin:5px;
-  background-color: blue;
-  flex-wrap: wrap;
-  justify-content: center;
-} */
-
-/* .list ul {
-  text-align: center;
-} */
+.footList {
+  background-color: cornflowerblue;
+}
