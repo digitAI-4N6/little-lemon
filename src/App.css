@@ -82,13 +82,13 @@ padding-top: 50px;
   text-align: center;
 }
 
-.list {
+/* .list {
   margin:5px;
   background-color: blue;
   flex-wrap: wrap;
   justify-content: center;
-}
+} */
 
-.list ul {
+/* .list ul {
   text-align: center;
-}
+} */
