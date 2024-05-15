@@ -86,3 +86,27 @@ padding-top: 50px;
 .footList {
   margin: 10px;
 }
+
+.billing {
+  background-color: #2b2d42;
+  display: table;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: right;
+}
+
+/* .billing ul {
+
+} */
+
+.billing li {
+  display: table-row;
+}
+
+.billing label {
+  display: table-cell;
+}
+
+.billing input {
+  display: table-cell;
+}
