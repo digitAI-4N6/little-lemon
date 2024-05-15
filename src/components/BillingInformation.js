@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { validateEmail } from "./subcomponents/BillingInformation/Utilities";
 
 export default function BillingInformation() {
   // Basic Info
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -18,18 +19,47 @@ export default function BillingInformation() {
   const [expiration, setExpiration] = useState("");
   const [cvv, setCVV] = useState("");
 
+
+  const getIsFormValid = () => {
+    return(
+      firstName &&
+      lastName &&
+      validateEmail(email) &&
+      phone &&
+      address &&
+      city &&
+      state &&
+      zipcode &&
+      credit &&
+      expiration &&
+      cvv
+      )
+  };
+
+  const clearForm = () => {
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Account created!");
+    clearForm();
+  };
+
   return (
     <>
       <h2>Billing Information</h2>
       <form className="billing">
         <ul className="basicInfo">
           <li>
-            <label>Name</label>
+            <label>First Name</label>
             <input
               type="text"
-              placeholder="Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              placeholder="First Name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
             />
           </li>
           <li>
