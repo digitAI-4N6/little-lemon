@@ -40,6 +40,7 @@
 * {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .container {
@@ -76,9 +77,18 @@ padding-top: 50px;
 }
 
 .foot {
-  display: flexbox;
+  display: inline-flex;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .list {
   margin:5px;
+  background-color: blue;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list ul {
+  text-align: center;
 }
