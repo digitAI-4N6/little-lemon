@@ -96,11 +96,11 @@ export default function BillingInformation() {
           </li>
           <li>
             <label>
-              Billing Zipcode<sup>*</sup>
+              Zipcode<sup>*</sup>
             </label>
             <input
               type="text"
-              placeholder="Billing Zipcode"
+              placeholder="Zipcode"
               value={zipcode}
               onChange={(e) => setZipcode(e.target.value)}
             />
