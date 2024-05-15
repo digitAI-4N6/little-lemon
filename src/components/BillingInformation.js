@@ -21,7 +21,7 @@ export default function BillingInformation() {
   return (
     <>
       <h2>Billing Information</h2>
-      <article>
+      <form className="billing">
         <ul className="basicInfo">
           <li>
             <label>Name</label>
@@ -139,7 +139,7 @@ export default function BillingInformation() {
             />
           </li>
         </ul>
-      </article>
+      </form>
     </>
   );
 }
