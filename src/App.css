@@ -87,8 +87,12 @@ padding-top: 50px;
   margin: 10px;
 }
 
+h2 {
+  text-align: center;
+}
+
 .billing {
-  background-color: #61dafb;
+  /* background-color: #61dafb; */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
