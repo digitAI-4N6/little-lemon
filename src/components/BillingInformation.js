@@ -43,7 +43,7 @@ export default function BillingInformation() {
           </li>
           <li>
             <label>
-              Email Address<sup>*</sup>
+              Email Address
             </label>
             <input
               type="email"
@@ -54,7 +54,7 @@ export default function BillingInformation() {
           </li>
           <li>
             <label>
-              Phone Number<sup>*</sup>
+              Phone Number
             </label>
             <input
               type="phone"
@@ -63,8 +63,8 @@ export default function BillingInformation() {
               onChange={(e) => setPhone(e.target.value)}
             />
           </li>
-        </ul>
-        <ul className="address">
+        {/* </ul>
+        <ul className="address"> */}
           <li>
             <label>Billing Address</label>
             <input
@@ -85,7 +85,7 @@ export default function BillingInformation() {
           </li>
           <li>
             <label>
-              State<sup>*</sup>
+              State
             </label>
             <input
               type="text"
@@ -96,7 +96,7 @@ export default function BillingInformation() {
           </li>
           <li>
             <label>
-              Zipcode<sup>*</sup>
+              Zipcode
             </label>
             <input
               type="text"
@@ -105,8 +105,8 @@ export default function BillingInformation() {
               onChange={(e) => setZipcode(e.target.value)}
             />
           </li>
-        </ul>
-        <ul className="creditDetails">
+        {/* </ul>
+        <ul className="creditDetails"> */}
           <li>
             <label>Credit Card Number</label>
             <input
@@ -118,7 +118,7 @@ export default function BillingInformation() {
           </li>
           <li>
             <label>
-              Expiration Date<sup>*</sup>
+              Expiration Date
             </label>
             <input
               type="text"
@@ -129,7 +129,7 @@ export default function BillingInformation() {
           </li>
           <li>
             <label>
-              CVV<sup>*</sup>
+              CVV
             </label>
             <input
               type="text"
