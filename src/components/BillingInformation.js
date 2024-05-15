@@ -44,7 +44,7 @@ export default function BillingInformation() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Account created!");
+    alert("Table reserved!");
     clearForm();
   };
 
