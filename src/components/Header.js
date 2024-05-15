@@ -1,4 +1,4 @@
-import restaurant from "../images/restaurant.jpg";
+// import restaurant from "../images/restaurant.jpg";
 
 export default function Header() {
     return (
