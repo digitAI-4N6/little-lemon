@@ -1,6 +1,7 @@
 export default function Socials() {
     return (
         <>
+        <article className="footList">
         <h3>Social Media Links</h3>
         <ul>
           <li>
@@ -13,6 +14,7 @@ export default function Socials() {
             <a href="">Punterest</a>
           </li>
         </ul>
+        </article>
         </>
     )
 }
