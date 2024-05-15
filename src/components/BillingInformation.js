@@ -51,7 +51,7 @@ export default function BillingInformation() {
   return (
     <>
       <h2>Billing Information</h2>
-      <form className="billing">
+      <form className="billing" onSubmit={handleSubmit}>
         <ul className="basicInfo">
           <li>
             <label>First Name</label>
