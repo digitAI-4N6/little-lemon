@@ -1,7 +1,7 @@
 import Logo from "../images/Logo .svg";
-import DoormatNavigation from "./subcomponents/DoormatNavigation";
-import Contact from "./subcomponents/Contact";
-import Socials from "./subcomponents/Socials";
+import DoormatNavigation from "./footer-subcomponents/DoormatNavigation";
+import Contact from "./footer-subcomponents/Contact";
+import Socials from "./footer-subcomponents/Socials";
 
 export default function Footer() {
   return (
