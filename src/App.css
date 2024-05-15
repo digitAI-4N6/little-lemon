@@ -88,16 +88,17 @@ padding-top: 50px;
 }
 
 .billing {
-  background-color: #2b2d42;
-  display: table;
+  background-color: #61dafb;
+  display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-content: right;
 }
 
-/* .billing ul {
-
-} */
+.billing ul {
+  display: table-row-group;
+  justify-content:space-between;
+  padding: 5px;
+}
 
 .billing li {
   display: table-row;
