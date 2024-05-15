@@ -1,6 +1,6 @@
 import logo from "../images/Logo.svg";
 
-export default function() {
+export default function Nav() {
     return (
         <ul className="container">
             <li><img src={logo} alt="Little Lemon Logo"/></li>
