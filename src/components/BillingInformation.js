@@ -8,22 +8,27 @@ export default function BillingInformation() {
 
   return (
     <>
-      <article className="Basic Info">
-        <p>Billing Information</p>
-        <label>Name:</label>
-        <input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <label>Last name</label>
-        <input
-          type="text"
-          placeholder="Last name"
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-        />
+      <ul className="Basic Info">
+        <li>
+          <p>Billing Information</p>
+          <label>Name:</label>
+          <input
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </li>
+        <li>
+          <label>Last name</label>
+          <input
+            type="text"
+            placeholder="Last name"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+          />
+        </li>
+        <li>
         <label>
           Email address<sup>*</sup>
         </label>
@@ -33,6 +38,8 @@ export default function BillingInformation() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
+        </li>
+        <li>
         <label>
           Phone number<sup>*</sup>
         </label>
@@ -42,7 +49,8 @@ export default function BillingInformation() {
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         />
-      </article>
+        </li>
+      </ul>
     </>
   );
 }
