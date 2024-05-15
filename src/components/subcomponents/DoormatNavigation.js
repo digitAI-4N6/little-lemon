@@ -1,6 +1,7 @@
 export default function DoormatNavigation() {
     return (
         <>
+        <article className="footList">
         <h3>Doormat Navigation</h3>
         <ul>
           <li>
@@ -22,6 +23,7 @@ export default function DoormatNavigation() {
             <a href="">Login</a>
           </li>
         </ul>
+        </article>
         </>
     )
 }
