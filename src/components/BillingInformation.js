@@ -19,9 +19,8 @@ export default function BillingInformation() {
   const [expiration, setExpiration] = useState("");
   const [cvv, setCVV] = useState("");
 
-
   const getIsFormValid = () => {
-    return(
+    return (
       firstName &&
       lastName &&
       validateEmail(email) &&
@@ -33,13 +32,21 @@ export default function BillingInformation() {
       credit &&
       expiration &&
       cvv
-      )
+    );
   };
 
   const clearForm = () => {
     setFirstName("");
     setLastName("");
     setEmail("");
+    setPhone("");
+    setAddress("");
+    setCity("");
+    setState("");
+    setZipcode("");
+    setCredit("");
+    setExpiration("");
+    setCVV("");
   };
 
   const handleSubmit = (e) => {
@@ -72,9 +79,7 @@ export default function BillingInformation() {
             />
           </li>
           <li>
-            <label>
-              Email Address
-            </label>
+            <label>Email Address</label>
             <input
               type="email"
               placeholder="Email address"
@@ -83,9 +88,7 @@ export default function BillingInformation() {
             />
           </li>
           <li>
-            <label>
-              Phone Number
-            </label>
+            <label>Phone Number</label>
             <input
               type="phone"
               placeholder="Phone number"
@@ -93,7 +96,7 @@ export default function BillingInformation() {
               onChange={(e) => setPhone(e.target.value)}
             />
           </li>
-        {/* </ul>
+          {/* </ul>
         <ul className="address"> */}
           <li>
             <label>Billing Address</label>
@@ -114,9 +117,7 @@ export default function BillingInformation() {
             />
           </li>
           <li>
-            <label>
-              State
-            </label>
+            <label>State</label>
             <input
               type="text"
               placeholder="State"
@@ -125,9 +126,7 @@ export default function BillingInformation() {
             />
           </li>
           <li>
-            <label>
-              Zipcode
-            </label>
+            <label>Zipcode</label>
             <input
               type="text"
               placeholder="Zipcode"
@@ -135,7 +134,7 @@ export default function BillingInformation() {
               onChange={(e) => setZipcode(e.target.value)}
             />
           </li>
-        {/* </ul>
+          {/* </ul>
         <ul className="creditDetails"> */}
           <li>
             <label>Credit Card Number</label>
@@ -147,9 +146,7 @@ export default function BillingInformation() {
             />
           </li>
           <li>
-            <label>
-              Expiration Date
-            </label>
+            <label>Expiration Date</label>
             <input
               type="text"
               placeholder="Expiration Date"
@@ -158,9 +155,7 @@ export default function BillingInformation() {
             />
           </li>
           <li>
-            <label>
-              CVV
-            </label>
+            <label>CVV</label>
             <input
               type="text"
               placeholder="Security Code (CVV)"
@@ -168,6 +163,9 @@ export default function BillingInformation() {
               onChange={(e) => setCVV(e.target.value)}
             />
           </li>
+          <button type="submit" disabled={!getIsFormValid()}>
+            Reserve Table
+          </button>
         </ul>
       </form>
     </>
