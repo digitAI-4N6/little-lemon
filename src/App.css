@@ -84,13 +84,13 @@
 
 form {
   display: grid;
-  grid-template-columns: max-content 2fr;
+  grid-template-columns: max-content 1fr;
   grid-column-gap: 1em;
 }
 
-.billing li {
+.billing {
   background-color: #61dafb;
-  grid-column: span 2;
+  grid-column: span 1;
   display: grid;
   grid: inherit;
   grid-template-columns: subgrid;
