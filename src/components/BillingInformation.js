@@ -59,7 +59,7 @@ export default function BillingInformation() {
     <>
       <h2>Billing Information</h2>
       <form className="billing" onSubmit={handleSubmit}>
-            <label for="firstName">First Name</label>
+            <label for="firstName" className="field">First Name</label>
             <input
               type="text"
               placeholder="First Name"
@@ -68,7 +68,7 @@ export default function BillingInformation() {
               id="firstName"
               name="firstName"
             />
-            <label for="lastName">Last Name</label>
+            <label for="lastName" className="field">Last Name</label>
             <input
               type="text"
               placeholder="Last name"
@@ -77,7 +77,7 @@ export default function BillingInformation() {
               id="lastName"
               name="lastName"
             />
-            <label for="email">Email Address</label>
+            <label for="email" className="field">Email Address</label>
             <input
               type="email"
               placeholder="Email address"
@@ -86,7 +86,7 @@ export default function BillingInformation() {
               id="email"
               name="email"
             />
-            <label for="phone">Phone Number</label>
+            <label for="phone" className="field">Phone Number</label>
             <input
               type="phone"
               placeholder="Phone number"
@@ -95,7 +95,7 @@ export default function BillingInformation() {
               id="phone"
               name="phone"
             />
-            <label for="address">Billing Address</label>
+            <label for="address" className="field">Billing Address</label>
             <input
               type="text"
               placeholder="Billing Address"
@@ -104,7 +104,7 @@ export default function BillingInformation() {
               id="address"
               name="address"
             />
-            <label for="city">City</label>
+            <label for="city" className="field">City</label>
             <input
               type="text"
               placeholder="City"
@@ -113,7 +113,7 @@ export default function BillingInformation() {
               id="city"
               name="city"
             />
-            <label for="state">State</label>
+            <label for="state" className="field">State</label>
             <input
               type="text"
               placeholder="State"
@@ -122,7 +122,7 @@ export default function BillingInformation() {
               id="state"
               name="state"
             />
-            <label for="zipcode">Zipcode</label>
+            <label for="zipcode" className="field">Zipcode</label>
             <input
               type="text"
               placeholder="Zipcode"
@@ -131,7 +131,7 @@ export default function BillingInformation() {
               id="zipcode"
               name="zipcode"
             />
-            <label for="credit">Credit Card Number</label>
+            <label for="credit" className="field">Credit Card Number</label>
             <input
               type="text"
               placeholder="Credit Card Number"
@@ -140,7 +140,7 @@ export default function BillingInformation() {
               id="credit"
               name="credit"
             />
-            <label for="expiration">Expiration Date</label>
+            <label for="expiration" className="field">Expiration Date</label>
             <input
               type="text"
               placeholder="Expiration Date"
@@ -149,7 +149,7 @@ export default function BillingInformation() {
               id="expiration"
               name="expiration"
             />
-            <label for="cvv">CVV</label>
+            <label for="cvv" className="field">CVV</label>
             <input
               type="text"
               placeholder="Security Code (CVV)"
