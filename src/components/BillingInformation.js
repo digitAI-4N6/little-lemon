@@ -61,106 +61,117 @@ export default function BillingInformation() {
       <form className="billing" onSubmit={handleSubmit}>
         <ul className="basicInfo">
           <li>
-            <label>First Name</label>
+            <label for="firstName">First Name</label>
             <input
               type="text"
               placeholder="First Name"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
+              id="firstName"
             />
           </li>
           <li>
-            <label>Last Name</label>
+            <label for="lastName">Last Name</label>
             <input
               type="text"
               placeholder="Last name"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
+              id="lastName"
             />
           </li>
           <li>
-            <label>Email Address</label>
+            <label for="email">Email Address</label>
             <input
               type="email"
               placeholder="Email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              id="email"
             />
           </li>
           <li>
-            <label>Phone Number</label>
+            <label for="phone">Phone Number</label>
             <input
               type="phone"
               placeholder="Phone number"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
+              id="phone"
             />
           </li>
           {/* </ul>
         <ul className="address"> */}
           <li>
-            <label>Billing Address</label>
+            <label for="address">Billing Address</label>
             <input
               type="text"
               placeholder="Billing Address"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
+              id="address"
             />
           </li>
           <li>
-            <label>City</label>
+            <label for="city">City</label>
             <input
               type="text"
               placeholder="City"
               value={city}
               onChange={(e) => setCity(e.target.value)}
+              id="city"
             />
           </li>
           <li>
-            <label>State</label>
+            <label for="state">State</label>
             <input
               type="text"
               placeholder="State"
               value={state}
               onChange={(e) => setState(e.target.value)}
+              id="state"
             />
           </li>
           <li>
-            <label>Zipcode</label>
+            <label for="zipcode">Zipcode</label>
             <input
               type="text"
               placeholder="Zipcode"
               value={zipcode}
               onChange={(e) => setZipcode(e.target.value)}
+              id="zipcode"
             />
           </li>
           {/* </ul>
         <ul className="creditDetails"> */}
           <li>
-            <label>Credit Card Number</label>
+            <label for="credit">Credit Card Number</label>
             <input
               type="text"
               placeholder="Credit Card Number"
               value={credit}
               onChange={(e) => setCredit(e.target.value)}
+              id="credit"
             />
           </li>
           <li>
-            <label>Expiration Date</label>
+            <label for="expiration">Expiration Date</label>
             <input
               type="text"
               placeholder="Expiration Date"
               value={expiration}
               onChange={(e) => setExpiration(e.target.value)}
+              id="expiration"
             />
           </li>
           <li>
-            <label>CVV</label>
+            <label for="cvv">CVV</label>
             <input
               type="text"
               placeholder="Security Code (CVV)"
               value={cvv}
               onChange={(e) => setCVV(e.target.value)}
+              id="cvv"
             />
           </li>
           <button type="submit" disabled={!getIsFormValid()}>
