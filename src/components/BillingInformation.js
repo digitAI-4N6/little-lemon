@@ -1,5 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { validateEmail } from "./subcomponents/BillingInformation/Utilities";
+import BookingForm from "./subcomponents/BookingForm";
 
 export default function BillingInformation() {
   // Reservation Details
@@ -69,8 +70,9 @@ export default function BillingInformation() {
   return (
     <>
       <h2>Reservation Details</h2>
-      <form className="billing" onSubmit={handleSubmit}>
-        <label for="guests" className="field">
+      <BookingForm />
+      {/* <form className="billing" onSubmit={handleSubmit}>
+        <label htmlFor="guests" className="field">
           Number of Guests
         </label>
         <input
@@ -83,7 +85,7 @@ export default function BillingInformation() {
         id="guests"
         name="guests"
         />
-        <label for="date" className="field">
+        <label htmlFor="date" className="field">
           Date
         </label>
         <input
@@ -96,7 +98,7 @@ export default function BillingInformation() {
           id="date"
           name="date"
         />
-        <label for="time" className="field">
+        <label htmlFor="time" className="field">
           Time
         </label>
         <input
@@ -108,7 +110,7 @@ export default function BillingInformation() {
         max="21:00"
         id="time"
         name="time" />
-        <label for="firstName" className="field">
+        <label htmlFor="firstName" className="field">
           First Name
         </label>
         <input
@@ -119,7 +121,7 @@ export default function BillingInformation() {
           id="firstName"
           name="firstName"
         />
-        <label for="lastName" className="field">
+        <label htmlFor="lastName" className="field">
           Last Name
         </label>
         <input
@@ -130,7 +132,7 @@ export default function BillingInformation() {
           id="lastName"
           name="lastName"
         />
-        <label for="email" className="field">
+        <label htmlFor="email" className="field">
           Email Address
         </label>
         <input
@@ -141,7 +143,7 @@ export default function BillingInformation() {
           id="email"
           name="email"
         />
-        <label for="phone" className="field">
+        <label htmlFor="phone" className="field">
           Phone Number
         </label>
         <input
@@ -152,7 +154,7 @@ export default function BillingInformation() {
           id="phone"
           name="phone"
         />
-        <label for="address" className="field">
+        <label htmlFor="address" className="field">
           Billing Address
         </label>
         <input
@@ -163,7 +165,7 @@ export default function BillingInformation() {
           id="address"
           name="address"
         />
-        <label for="city" className="field">
+        <label htmlFor="city" className="field">
           City
         </label>
         <input
@@ -174,7 +176,7 @@ export default function BillingInformation() {
           id="city"
           name="city"
         />
-        <label for="state" className="field">
+        <label htmlFor="state" className="field">
           State
         </label>
         <input
@@ -185,7 +187,7 @@ export default function BillingInformation() {
           id="state"
           name="state"
         />
-        <label for="zipcode" className="field">
+        <label htmlFor="zipcode" className="field">
           Zipcode
         </label>
         <input
@@ -196,7 +198,7 @@ export default function BillingInformation() {
           id="zipcode"
           name="zipcode"
         />
-        <label for="credit" className="field">
+        <label htmlFor="credit" className="field">
           Credit Card Number
         </label>
         <input
@@ -207,7 +209,7 @@ export default function BillingInformation() {
           id="credit"
           name="credit"
         />
-        <label for="expiration" className="field">
+        <label htmlFor="expiration" className="field">
           Expiration Date
         </label>
         <input
@@ -218,7 +220,7 @@ export default function BillingInformation() {
           id="expiration"
           name="expiration"
         />
-        <label for="cvv" className="field">
+        <label htmlFor="cvv" className="field">
           CVV
         </label>
         <input
@@ -232,7 +234,7 @@ export default function BillingInformation() {
         <button type="submit" disabled={!getIsFormValid()}>
           Reserve Table
         </button>
-      </form>
+      </form> */}
     </>
   );
 }
