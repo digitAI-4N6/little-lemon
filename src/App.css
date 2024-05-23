@@ -86,10 +86,10 @@ form {
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-column-gap: 1em;
+  margin-right: 1em;
 }
 
-.billing {
-  background-color: #61dafb;
+.field {
   grid-column: span 1;
   display: grid;
   grid: inherit;
