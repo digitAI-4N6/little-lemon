@@ -59,8 +59,6 @@ export default function BillingInformation() {
     <>
       <h2>Billing Information</h2>
       <form className="billing" onSubmit={handleSubmit}>
-        <ul className="basicInfo">
-          <li>
             <label for="firstName">First Name</label>
             <input
               type="text"
@@ -68,9 +66,8 @@ export default function BillingInformation() {
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               id="firstName"
+              name="firstName"
             />
-          </li>
-          <li>
             <label for="lastName">Last Name</label>
             <input
               type="text"
@@ -78,9 +75,8 @@ export default function BillingInformation() {
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
               id="lastName"
+              name="lastName"
             />
-          </li>
-          <li>
             <label for="email">Email Address</label>
             <input
               type="email"
@@ -88,9 +84,8 @@ export default function BillingInformation() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               id="email"
+              name="email"
             />
-          </li>
-          <li>
             <label for="phone">Phone Number</label>
             <input
               type="phone"
@@ -98,11 +93,8 @@ export default function BillingInformation() {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               id="phone"
+              name="phone"
             />
-          </li>
-          {/* </ul>
-        <ul className="address"> */}
-          <li>
             <label for="address">Billing Address</label>
             <input
               type="text"
@@ -110,9 +102,8 @@ export default function BillingInformation() {
               value={address}
               onChange={(e) => setAddress(e.target.value)}
               id="address"
+              name="address"
             />
-          </li>
-          <li>
             <label for="city">City</label>
             <input
               type="text"
@@ -120,9 +111,8 @@ export default function BillingInformation() {
               value={city}
               onChange={(e) => setCity(e.target.value)}
               id="city"
+              name="city"
             />
-          </li>
-          <li>
             <label for="state">State</label>
             <input
               type="text"
@@ -130,9 +120,8 @@ export default function BillingInformation() {
               value={state}
               onChange={(e) => setState(e.target.value)}
               id="state"
+              name="state"
             />
-          </li>
-          <li>
             <label for="zipcode">Zipcode</label>
             <input
               type="text"
@@ -140,11 +129,8 @@ export default function BillingInformation() {
               value={zipcode}
               onChange={(e) => setZipcode(e.target.value)}
               id="zipcode"
+              name="zipcode"
             />
-          </li>
-          {/* </ul>
-        <ul className="creditDetails"> */}
-          <li>
             <label for="credit">Credit Card Number</label>
             <input
               type="text"
@@ -152,9 +138,8 @@ export default function BillingInformation() {
               value={credit}
               onChange={(e) => setCredit(e.target.value)}
               id="credit"
+              name="credit"
             />
-          </li>
-          <li>
             <label for="expiration">Expiration Date</label>
             <input
               type="text"
@@ -162,9 +147,8 @@ export default function BillingInformation() {
               value={expiration}
               onChange={(e) => setExpiration(e.target.value)}
               id="expiration"
+              name="expiration"
             />
-          </li>
-          <li>
             <label for="cvv">CVV</label>
             <input
               type="text"
@@ -172,12 +156,11 @@ export default function BillingInformation() {
               value={cvv}
               onChange={(e) => setCVV(e.target.value)}
               id="cvv"
+              name="cvv"
             />
-          </li>
           <button type="submit" disabled={!getIsFormValid()}>
             Reserve Table
           </button>
-        </ul>
       </form>
     </>
   );
