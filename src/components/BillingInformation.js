@@ -77,6 +77,7 @@ export default function BillingInformation() {
         type="number"
         placeholder="Number of Guests"
         value={guests}
+        onChange={(e) => setGuests(e.target.value)}
         min="1"
         max="10"
         id="guests"
@@ -89,6 +90,7 @@ export default function BillingInformation() {
           type="date"
           placeholder="2024-05-16"
           value={date}
+          onChange={(e) => setDate(e.target.value)}
           min="2024-05-16"
           max="2024-12-16"
           id="date"
@@ -97,7 +99,15 @@ export default function BillingInformation() {
         <label for="time" className="field">
           Time
         </label>
-        <input type="time" min="9:00" max="21:00" id="time" name="time" />
+        <input
+        type="time"
+        placeholder="1:23 PM"
+        value={time}
+        onChange={(e) => setTime(e.target.value)}
+        min="9:00"
+        max="21:00"
+        id="time"
+        name="time" />
         <label for="firstName" className="field">
           First Name
         </label>
