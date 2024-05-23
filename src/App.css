@@ -87,15 +87,15 @@ form {
   grid-template-columns: max-content 1fr;
   grid-column-gap: 1em;
   margin-right: 1em;
+  margin-bottom: 1em;
 }
 
-.field {
+ .field {
   grid-column: span 1;
   display: grid;
   grid: inherit;
   grid-template-columns: subgrid;
   grid-gap: inherit;
-  margin-bottom: 1em;
 }
 
 /* .foot {
