@@ -2,7 +2,7 @@ import logo from "../images/Logo.svg";
 
 export default function Nav() {
     return (
-        <ul className="container">
+        <ul className="Nav">
             <li><img src={logo} alt="Little Lemon Logo"/></li>
             <li><a href="">Home</a></li>
             <li><a href="">About</a></li>
