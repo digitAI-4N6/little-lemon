@@ -73,7 +73,15 @@ export default function BillingInformation() {
         <label for="guests" className="field">
           Number of Guests
         </label>
-        <input type="number" min="0" max="10" id="guests" name="guests" />
+        <input
+        type="number"
+        placeholder="Number of Guests"
+        value={guests}
+        min="1"
+        max="10"
+        id="guests"
+        name="guests"
+        />
         <label for="date" className="field">
           Date
         </label>
