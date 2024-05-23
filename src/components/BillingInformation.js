@@ -87,7 +87,8 @@ export default function BillingInformation() {
         </label>
         <input
           type="date"
-          value="2024-05-16"
+          placeholder="2024-05-16"
+          value={date}
           min="2024-05-16"
           max="2024-12-16"
           id="date"
