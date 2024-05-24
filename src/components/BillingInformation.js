@@ -7,12 +7,14 @@ export default function BillingInformation() {
   const [guests, setGuests] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
+  const [occasion, setOccasion] = useState("");
 
   const getIsFormValid = () => {
     return (
       guests &&
       date &&
-      time
+      time &&
+      occasion
     );
   };
 
@@ -20,6 +22,7 @@ export default function BillingInformation() {
     setGuests("");
     setDate("");
     setTime("");
+    setOccasion("");
   };
 
   const handleSubmit = (e) => {
@@ -31,7 +34,12 @@ export default function BillingInformation() {
   return (
     <>
       <h2>Reservation Details</h2>
-      <BookingForm />
+      <BookingForm
+      guests={guests}
+      date={date}
+      time={time}
+      occasion={occasion}
+      />
     </>
   );
 }
