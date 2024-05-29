@@ -1,58 +1,17 @@
 import React, { useState } from 'react';
 
-export default function BookingForm() {
-    const [date, setDate] = useState("");
-    const [time, setTime] = useState([
-        {
-            time: "17:00",
-        },
-        {
-            time: "18:00",
-        },
-        {
-            time: "19:00",
-        },
-        {
-            time: "20:00",
-        },
-        {
-            time: "21:00",
-        },
-        {
-            time: "22:00",
-        },
-    ]);
-    const [guests, setGuests] = useState("");
-    const [occasion, setOccasion] = useState([
-        {
-            occasion: "Birthday",
-        },
-        {
-            occasion: "Anniversary",
-        },
-    ])
-
-    const getIsFormValid = () => {
-        return (
-          guests &&
-          date &&
-          time &&
-          occasion
-        );
-      };
-
-      const clearForm = () => {
-        setGuests("");
-        setDate("");
-        setTime("");
-        setOccasion("")
-      };
-
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        alert("Table reserved!");
-        clearForm();
-      };
+export default function BookingForm({
+    guests,
+    setGuests,
+    date,
+    setDate,
+    availableTimes,
+    setAvailableTimes,
+    occasion,
+    setOccasion,
+    onSubmit,
+    isFormValid
+}) {
 
     return (
         <>
@@ -64,11 +23,11 @@ export default function BookingForm() {
                 onChange={(e) => setDate(e.target.value)}
                 value={date}
                 />
-                <label htmlFor="time">Choose time</label>
+                <label htmlFor="availableTimes">Choose time</label>
                 <select
-                id="time"
-                onChange={(e) => setTime(e.target.value)}
-                value={time}
+                id="availableTimes"
+                onChange={(e) => setAvailableTimes(e.target.value)}
+                value={availableTimes}
                 >
                     <option>17:00</option>
                     <option>18:00</option>
@@ -96,7 +55,7 @@ export default function BookingForm() {
                 </select>
                 <button
                 type="submit"
-                disabled={!getIsFormValid()}
+                // disabled={!getIsFormValid()}
                 >Make Your Reservation</button>
             </form>
         </>
