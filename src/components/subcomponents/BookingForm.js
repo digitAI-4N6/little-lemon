@@ -1,58 +1,58 @@
 import React, { useState } from 'react';
 
 export default function BookingForm() {
-    const [date, setDate] = useState("");
-    const [time, setTime] = useState([
-        {
-            time: "17:00",
-        },
-        {
-            time: "18:00",
-        },
-        {
-            time: "19:00",
-        },
-        {
-            time: "20:00",
-        },
-        {
-            time: "21:00",
-        },
-        {
-            time: "22:00",
-        },
-    ]);
-    const [guests, setGuests] = useState("");
-    const [occasion, setOccasion] = useState([
-        {
-            occasion: "Birthday",
-        },
-        {
-            occasion: "Anniversary",
-        },
-    ])
+    // const [date, setDate] = useState("");
+    // const [availableTimes, setAvailableTimes] = useState([
+    //     {
+    //         time: "17:00",
+    //     },
+    //     {
+    //         time: "18:00",
+    //     },
+    //     {
+    //         time: "19:00",
+    //     },
+    //     {
+    //         time: "20:00",
+    //     },
+    //     {
+    //         time: "21:00",
+    //     },
+    //     {
+    //         time: "22:00",
+    //     },
+    // ]);
+    // const [guests, setGuests] = useState("");
+    // const [occasion, setOccasion] = useState([
+    //     {
+    //         occasion: "Birthday",
+    //     },
+    //     {
+    //         occasion: "Anniversary",
+    //     },
+    // ])
 
-    const getIsFormValid = () => {
-        return (
-          guests &&
-          date &&
-          time &&
-          occasion
-        );
-      };
+    // const getIsFormValid = () => {
+    //     return (
+    //       guests &&
+    //       date &&
+    //       availableTimes &&
+    //       occasion
+    //     );
+    //   };
 
-      const clearForm = () => {
-        setGuests("");
-        setDate("");
-        setTime("");
-        setOccasion("")
-      };
+    //   const clearForm = () => {
+    //     setGuests("");
+    //     setDate("");
+    //     setAvailableTimes("");
+    //     setOccasion("")
+    //   };
 
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        alert("Table reserved!");
-        clearForm();
-      };
+    //   const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     alert("Table reserved!");
+    //     clearForm();
+    //   };
 
     return (
         <>
@@ -64,11 +64,11 @@ export default function BookingForm() {
                 onChange={(e) => setDate(e.target.value)}
                 value={date}
                 />
-                <label htmlFor="time">Choose time</label>
+                <label htmlFor="availableTimes">Choose time</label>
                 <select
-                id="time"
-                onChange={(e) => setTime(e.target.value)}
-                value={time}
+                id="availableTimes"
+                onChange={(e) => setAvailableTimes(e.target.value)}
+                value={availableTimes}
                 >
                     <option>17:00</option>
                     <option>18:00</option>

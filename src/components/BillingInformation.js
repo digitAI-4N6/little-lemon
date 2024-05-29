@@ -6,14 +6,14 @@ export default function BillingInformation() {
   // Reservation Details
   const [guests, setGuests] = useState("");
   const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
+  const [availableTimes, setAvailableTimes] = useState("");
   const [occasion, setOccasion] = useState("");
 
   const getIsFormValid = () => {
     return (
       guests &&
       date &&
-      time &&
+      availableTimes &&
       occasion
     );
   };
@@ -21,7 +21,7 @@ export default function BillingInformation() {
   const clearForm = () => {
     setGuests("");
     setDate("");
-    setTime("");
+    setAvailableTimes("");
     setOccasion("");
   };
 
@@ -37,7 +37,7 @@ export default function BillingInformation() {
       <BookingForm
       guests={guests}
       date={date}
-      time={time}
+      time={availableTimes}
       occasion={occasion}
       />
     </>
