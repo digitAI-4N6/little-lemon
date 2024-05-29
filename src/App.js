@@ -14,7 +14,6 @@ function App() {
 
   return (
     <>
-      <body>
       <Nav />
       <Header />
         <Main 
@@ -28,7 +27,6 @@ function App() {
         setOccasion={setOccasion}
         />
         <Footer />
-      </body>
     </>
   );
 }
