@@ -20,6 +20,22 @@ export default function BookingForm({
         clearForm();
       };
 
+      const clearForm = () => {
+        setGuests("");
+        setDate("");
+        setAvailableTimes("");
+        setOccasion("");
+      };
+
+      const getIsFormValid = () => {
+        return (
+          guests &&
+          date &&
+          availableTimes &&
+          occasion
+        );
+      };
+
     return (
         <>
             <form onSubmit={handleSubmit} style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
@@ -62,7 +78,7 @@ export default function BookingForm({
                 </select>
                 <button
                 type="submit"
-                // disabled={!getIsFormValid()}
+                disabled={!getIsFormValid()}
                 >Make Your Reservation</button>
             </form>
         </>
