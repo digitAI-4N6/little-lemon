@@ -9,8 +9,7 @@ export default function BookingForm({
     setAvailableTimes,
     occasion,
     setOccasion,
-    onSubmit,
-    // isFormValid
+    onSubmit
 }) {
 
     const handleSubmit = (e) => {

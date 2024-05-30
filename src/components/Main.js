@@ -5,7 +5,7 @@ export default function Main({guests, setGuests, date, setDate, availableTimes, 
     return (
         <>
         {/* <ReservationDetails /> */}
-        <Bookings 
+        <Bookings
         guests={guests}
         setGuests={setGuests}
         date={date}

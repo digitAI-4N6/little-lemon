@@ -13,7 +13,6 @@ export default function Bookings({
   occasion,
   setOccasion
 }) {
-  // Reservation Details
 
   const getIsFormValid = () => {
     return (
