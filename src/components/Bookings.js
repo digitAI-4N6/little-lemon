@@ -14,22 +14,6 @@ export default function Bookings({
   setOccasion
 }) {
 
-  const getIsFormValid = () => {
-    return (
-      guests &&
-      date &&
-      availableTimes &&
-      occasion
-    );
-  };
-
-  const clearForm = () => {
-    setGuests("");
-    setDate("");
-    setAvailableTimes("");
-    setOccasion("");
-  };
-
   return (
     <>
       <h2>Reservation Details</h2>
