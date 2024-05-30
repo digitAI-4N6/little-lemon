@@ -1,62 +1,43 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export default function BookingForm() {
-    // const [date, setDate] = useState("");
-    // const [availableTimes, setAvailableTimes] = useState([
-    //     {
-    //         time: "17:00",
-    //     },
-    //     {
-    //         time: "18:00",
-    //     },
-    //     {
-    //         time: "19:00",
-    //     },
-    //     {
-    //         time: "20:00",
-    //     },
-    //     {
-    //         time: "21:00",
-    //     },
-    //     {
-    //         time: "22:00",
-    //     },
-    // ]);
-    // const [guests, setGuests] = useState("");
-    // const [occasion, setOccasion] = useState([
-    //     {
-    //         occasion: "Birthday",
-    //     },
-    //     {
-    //         occasion: "Anniversary",
-    //     },
-    // ])
+export default function BookingForm({
+    guests,
+    setGuests,
+    date,
+    setDate,
+    availableTimes,
+    setAvailableTimes,
+    occasion,
+    setOccasion,
+    onSubmit
+}) {
 
-    // const getIsFormValid = () => {
-    //     return (
-    //       guests &&
-    //       date &&
-    //       availableTimes &&
-    //       occasion
-    //     );
-    //   };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("handleSubmit Activated!")
+        alert("Table reserved!");
+        clearForm();
+      };
 
-    //   const clearForm = () => {
-    //     setGuests("");
-    //     setDate("");
-    //     setAvailableTimes("");
-    //     setOccasion("")
-    //   };
+      const clearForm = () => {
+        setGuests("");
+        setDate("");
+        setAvailableTimes("");
+        setOccasion("");
+      };
 
-    //   const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     alert("Table reserved!");
-    //     clearForm();
-    //   };
+      const getIsFormValid = () => {
+        return (
+          guests &&
+          date &&
+          availableTimes &&
+          occasion
+        );
+      };
 
     return (
         <>
-            <form style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
+            <form onSubmit={handleSubmit} style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
                 <label htmlFor="date">Choose date</label>
                 <input
                 type="date"
