@@ -1,11 +1,11 @@
 // import ReservationDetails from "./ReservationDetails";
-import BillingInformation from "./BillingInformation";
+import Bookings from "./Bookings";
 
 export default function Main({guests, setGuests, date, setDate, availableTimes, setAvailableTimes, occasion, setOccasion}) {
     return (
         <>
         {/* <ReservationDetails /> */}
-        <BillingInformation 
+        <Bookings 
         guests={guests}
         setGuests={setGuests}
         date={date}
