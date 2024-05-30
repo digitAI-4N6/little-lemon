@@ -1,11 +1,17 @@
 // import ReservationDetails from "./ReservationDetails";
 import Bookings from "./Bookings";
+import React, { useState } from "react";
 
-export default function Main({guests, setGuests, date, setDate, availableTimes, setAvailableTimes, occasion, setOccasion}) {
-    return (
-        <>
-        {/* <ReservationDetails /> */}
-        <Bookings
+export default function Main() {
+  const [guests, setGuests] = useState("");
+  const [date, setDate] = useState("");
+  const [availableTimes, setAvailableTimes] = useState("");
+  const [occasion, setOccasion] = useState("");
+
+  return (
+    <>
+      {/* <ReservationDetails /> */}
+      <Bookings
         guests={guests}
         setGuests={setGuests}
         date={date}
@@ -14,7 +20,7 @@ export default function Main({guests, setGuests, date, setDate, availableTimes, 
         setAvailableTimes={setAvailableTimes}
         occasion={occasion}
         setOccasion={setOccasion}
-        />
-        </>
-    )
+      />
+    </>
+  );
 }
