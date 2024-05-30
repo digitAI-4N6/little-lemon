@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function BookingForm({
     guests,
@@ -10,8 +10,15 @@ export default function BookingForm({
     occasion,
     setOccasion,
     onSubmit,
-    isFormValid
+    // isFormValid
 }) {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("handleSubmit Activated!")
+        alert("Table reserved!");
+        clearForm();
+      };
 
     return (
         <>
@@ -55,6 +62,7 @@ export default function BookingForm({
                 </select>
                 <button
                 type="submit"
+                onSubmit={handleSubmit}
                 // disabled={!getIsFormValid()}
                 >Make Your Reservation</button>
             </form>
