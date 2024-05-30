@@ -7,25 +7,12 @@ import React, { useState } from 'react';
 
 
 function App() {
-  const [guests, setGuests] = useState("");
-  const [date, setDate] = useState("");
-  const [availableTimes, setAvailableTimes] = useState("");
-  const [occasion, setOccasion] = useState("");
 
   return (
     <>
       <Nav />
       <Header />
-        <Main 
-        guests={guests}
-        setGuests={setGuests}
-        date={date}
-        setDate={setDate}
-        availableTimes={availableTimes}
-        setAvailableTimes={setAvailableTimes}
-        occasion={occasion}
-        setOccasion={setOccasion}
-        />
+        <Main />
         <Footer />
     </>
   );
