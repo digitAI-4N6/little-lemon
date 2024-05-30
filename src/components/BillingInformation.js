@@ -31,13 +31,6 @@ export default function BillingInformation({
     setOccasion("");
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("handleSubmit Activated!")
-    alert("Table reserved!");
-    clearForm();
-  };
-
   return (
     <>
       <h2>Reservation Details</h2>
@@ -50,7 +43,6 @@ export default function BillingInformation({
       setAvailableTimes={setAvailableTimes}
       occasion={occasion}
       setOccasion={setOccasion}
-      onSubmit={handleSubmit}
       />
     </>
   );

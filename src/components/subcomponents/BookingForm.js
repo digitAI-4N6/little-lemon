@@ -22,7 +22,7 @@ export default function BookingForm({
 
     return (
         <>
-            <form style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
+            <form onSubmit={handleSubmit} style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
                 <label htmlFor="date">Choose date</label>
                 <input
                 type="date"
@@ -62,7 +62,6 @@ export default function BookingForm({
                 </select>
                 <button
                 type="submit"
-                onSubmit={handleSubmit}
                 // disabled={!getIsFormValid()}
                 >Make Your Reservation</button>
             </form>
