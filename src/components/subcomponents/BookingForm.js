@@ -5,8 +5,8 @@ export default function BookingForm({
     setGuests,
     date,
     setDate,
-    availableTimes,
-    setAvailableTimes,
+    state,
+    dispatch,
     occasion,
     setOccasion,
     onSubmit
@@ -19,10 +19,14 @@ export default function BookingForm({
         clearForm();
       };
 
+      const handleTimeChange = (e) => {
+        dispatch({type: 'SET_TIME', payload: e.target.value });
+      };
+
       const clearForm = () => {
         setGuests("");
         setDate("");
-        setAvailableTimes("");
+        dispatch({type: 'SET_TIME', payload: '17:00' });
         setOccasion("");
       };
 
@@ -30,7 +34,7 @@ export default function BookingForm({
         return (
           guests &&
           date &&
-          availableTimes &&
+          state.availableTimes &&
           occasion
         );
       };
@@ -48,8 +52,8 @@ export default function BookingForm({
                 <label htmlFor="availableTimes">Choose time</label>
                 <select
                 id="availableTimes"
-                onChange={(e) => setAvailableTimes(e.target.value)}
-                value={availableTimes}
+                onChange={handleTimeChange}
+                value={state.availableTimes}
                 >
                     <option>17:00</option>
                     <option>18:00</option>

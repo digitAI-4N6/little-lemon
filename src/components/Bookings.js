@@ -1,15 +1,13 @@
-import React, { useState } from "react";
-import { validateEmail } from "./subcomponents/BillingInformation/Utilities.js";
+import React from "react";
 import BookingForm from "./subcomponents/BookingForm.js";
-import App from "../App.js";
 
 export default function Bookings({
   guests,
   setGuests,
   date,
   setDate,
-  availableTimes,
-  setAvailableTimes,
+  state,
+  dispatch,
   occasion,
   setOccasion
 }) {
@@ -22,8 +20,8 @@ export default function Bookings({
       setGuests={setGuests}
       date={date}
       setDate={setDate}
-      availableTimes={availableTimes}
-      setAvailableTimes={setAvailableTimes}
+      state={state}
+      dispatch={dispatch}
       occasion={occasion}
       setOccasion={setOccasion}
       />
