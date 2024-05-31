@@ -9,6 +9,8 @@ const reducer = (state, action) => {
     switch(action.type) {
         case SET_TIME:
             return {...state, availableTimes: action.payload };
+        case UPDATE_TIMES:
+            return dispatch({ type: 'UPDATE_TIMES', payload: newAvailableTimes });
         default:
             return state;
     }
