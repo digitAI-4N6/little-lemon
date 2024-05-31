@@ -1,12 +1,26 @@
 // import ReservationDetails from "./ReservationDetails";
 import Bookings from "./Bookings";
-import React, { useState } from "react";
+import React, { useState, useReducer } from "react";
+
+const SET_TIME = 'SET_TIME';
+
+const reducer = (state, action) => {
+    switch(action.type) {
+        case SET_TIME:
+            return {...state, availableTimes: action.payload };
+        default:
+            return state;
+    }
+}
+
+const initialState = { availableTimes: '17:00' }
 
 export default function Main() {
   const [guests, setGuests] = useState("");
   const [date, setDate] = useState("");
-  const [availableTimes, setAvailableTimes] = useState("");
   const [occasion, setOccasion] = useState("");
+
+  const [state, dispatch] = useReducer("");
 
   return (
     <>
@@ -16,8 +30,8 @@ export default function Main() {
         setGuests={setGuests}
         date={date}
         setDate={setDate}
-        availableTimes={availableTimes}
-        setAvailableTimes={setAvailableTimes}
+        state={state}
+        dispatch={dispatch}
         occasion={occasion}
         setOccasion={setOccasion}
       />

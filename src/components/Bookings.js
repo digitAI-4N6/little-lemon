@@ -8,8 +8,8 @@ export default function Bookings({
   setGuests,
   date,
   setDate,
-  availableTimes,
-  setAvailableTimes,
+  state,
+  dispatch,
   occasion,
   setOccasion
 }) {
@@ -22,8 +22,8 @@ export default function Bookings({
       setGuests={setGuests}
       date={date}
       setDate={setDate}
-      availableTimes={availableTimes}
-      setAvailableTimes={setAvailableTimes}
+      state={state}
+      dispatch={dispatch}
       occasion={occasion}
       setOccasion={setOccasion}
       />
