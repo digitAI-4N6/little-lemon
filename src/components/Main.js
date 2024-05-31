@@ -20,7 +20,7 @@ export default function Main() {
   const [date, setDate] = useState("");
   const [occasion, setOccasion] = useState("");
 
-  const [state, dispatch] = useReducer("");
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <>

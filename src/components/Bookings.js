@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import { validateEmail } from "./subcomponents/BillingInformation/Utilities.js";
+import React from "react";
 import BookingForm from "./subcomponents/BookingForm.js";
-import App from "../App.js";
 
 export default function Bookings({
   guests,
