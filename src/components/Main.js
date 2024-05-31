@@ -4,7 +4,7 @@ import React, { useState, useReducer } from "react";
 
 const SET_TIME = 'SET_TIME';
 
-const reducer = (state, action) => {
+const updateTimes = (state, action) => {
     switch(action.type) {
         case SET_TIME:
             return {...state, availableTimes: action.payload };
@@ -20,7 +20,7 @@ export default function Main() {
   const [date, setDate] = useState("");
   const [occasion, setOccasion] = useState("");
 
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(updateTimes, initialState);
 
   return (
     <>
