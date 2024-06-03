@@ -4,7 +4,7 @@ import React, { useState, useReducer } from "react";
 
 const SET_TIME = 'SET_TIME';
 
-const updateTimes = (state, action) => {
+export const updateTimes = (state, action) => {
     switch(action.type) {
         case SET_TIME:
             return {...state, availableTimes: action.payload };
@@ -13,7 +13,7 @@ const updateTimes = (state, action) => {
     }
 }
 
-const initializeTimes = () => {
+export const initializeTimes = () => {
   return {availableTimes: '17:00'};
 };
 
