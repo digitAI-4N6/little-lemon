@@ -48,12 +48,14 @@ export default function BookingForm({
                 id="date"
                 onChange={(e) => setDate(e.target.value)}
                 value={date}
+                role='Choose date'
                 />
                 <label htmlFor="availableTimes">Choose time</label>
                 <select
                 id="availableTimes"
                 onChange={handleTimeChange}
                 value={state.availableTimes}
+                role='Select Time from Available Times'
                 >
                     <option>17:00</option>
                     <option>18:00</option>
@@ -71,10 +73,12 @@ export default function BookingForm({
                 max="10"
                 id="guests"
                 value={guests}
+                role='Select number of guests'
                 />
                 <label htmlFor="occasion">Occasion</label>
                 <select id="occasion"
                 onChange={(e) => setOccasion(e.target.value)}
+                role='Select occasion'
                 >
                     <option>Birthday</option>
                     <option>Anniversary</option>
@@ -82,6 +86,7 @@ export default function BookingForm({
                 <button
                 type="submit"
                 disabled={!getIsFormValid()}
+                role='Submit your reservation'
                 >Make Your Reservation</button>
             </form>
         </>
