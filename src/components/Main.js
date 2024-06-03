@@ -13,14 +13,16 @@ const updateTimes = (state, action) => {
     }
 }
 
-const initialState = { availableTimes: '17:00' }
+const initializeTimes = () => {
+  return {availableTimes: '17:00'};
+};
 
 export default function Main() {
   const [guests, setGuests] = useState("");
   const [date, setDate] = useState("");
   const [occasion, setOccasion] = useState("");
 
-  const [state, dispatch] = useReducer(updateTimes, initialState);
+  const [state, dispatch] = useReducer(updateTimes, initializeTimes);
 
   return (
     <>
