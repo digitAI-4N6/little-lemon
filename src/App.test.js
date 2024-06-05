@@ -28,7 +28,7 @@ test("Renders the BookingForm elements", () => {
   });
 
   // Get by Label Text
-  const dateElement = screen.getByTitle(/Choose date/i);
+  const dateElement = screen.getByLabelText(/Choose date/i);
   expect(dateElement).toBeInTheDocument();
 });
 
