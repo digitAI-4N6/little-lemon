@@ -34,7 +34,7 @@ test("Renders the BookingForm elements", () => {
 
 // Unit test for initializeTimes
 test("Should Initialize Times Correctly", () => {
-const initialState = screen.initializeTimes;
+const initialState = initializeTimes();
 expect(initialState).toEqual({availableTimes: '17:00'});
 });
 
