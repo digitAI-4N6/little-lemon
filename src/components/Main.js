@@ -1,20 +1,24 @@
-// import ReservationDetails from "./ReservationDetails";
-import Bookings from "./Bookings";
 import React, { useState, useReducer } from "react";
+import Bookings from "./Bookings";
 
-const SET_TIME = 'SET_TIME';
+export const SET_TIME = 'SET_TIME';
 
 export const updateTimes = (state, action) => {
+    console.log('State before update:', state);
+    console.log('Action received:', action);
+
     switch(action.type) {
         case SET_TIME:
-            return {...state, availableTimes: action.payload };
+            const updatedState = {...state, availableTimes: action.payload };
+            console.log('State after update:', updatedState);
+            return updatedState;
         default:
             return state;
     }
 }
 
 export const initializeTimes = () => {
-  return {availableTimes: '17:00'};
+  return { availableTimes: '17:00' };
 };
 
 export default function Main() {
@@ -22,11 +26,10 @@ export default function Main() {
   const [date, setDate] = useState("");
   const [occasion, setOccasion] = useState("");
 
-  const [state, dispatch] = useReducer(updateTimes, initializeTimes);
+  const [state, dispatch] = useReducer(updateTimes, initializeTimes());
 
   return (
     <>
-      {/* <ReservationDetails /> */}
       <Bookings
         guests={guests}
         setGuests={setGuests}
