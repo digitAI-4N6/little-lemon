@@ -34,8 +34,8 @@ test("Renders the BookingForm elements", () => {
 
 // Unit test for initializeTimes
 test("Should Initialize Times Correctly", () => {
-  const initialState = initializeTimes();
-  expect(initialState).toEqual({ availableTimes: "17:00" });
+  const state = initializeTimes();
+  expect(state).toEqual({ availableTimes: "17:00" });
 });
 
 // Unit test for updateTimes
@@ -43,34 +43,10 @@ test("Should Update Times Correctly", () => {
   const initialTimes = { availableTimes: "17:00" };
   const action = { type: SET_TIME, payload: "18:00" };
   const newState = updateTimes(initialTimes, action);
+
+  console.log('Initial state:', initialTimes);
+  console.log('Action:', action);
+  console.log('New state:', newState);
+
   expect(newState).toEqual({ availableTimes: "18:00" });
 });
-
-// import { render, screen } from '@testing-library/react';
-// import BookingForm from './components/subcomponents/BookingForm';
-
-// test('Renders the BookingForm heading', () => {
-//   render(<BookingForm />);
-//   const chooseDate = screen.getAllByRole("Choose date");
-//   expect(chooseDate).toBeInTheDocument();
-// });
-
-// import { render, fireEvent, screen } from "@testing-library/react";
-// import App from "./App";
-
-// test("Adds one", () => {
-//   // Render the App component
-//   render(<App />);
-
-//   // Save the heading in a variable
-//   const heading = screen.getByTestId("currentNumber");
-
-//   // Save the button in a variable
-//   const btn = screen.getByTestId("add-one");
-
-//   // Click the button
-//   fireEvent.click(btn);
-
-//   // Test assumption
-//   expect(heading).toHaveTextContent("2");
-// });
